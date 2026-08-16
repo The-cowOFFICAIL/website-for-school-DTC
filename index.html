@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="george.css">
+    <title>George</title>
+</head>
+<body>
+    <h1>Pizza</h1>
+
+    <div class="tab-buttons">
+        <button class="tab-btn active" onclick="showTab('home')">home</button>
+        <button class="tab-btn" onclick="showTab('mpp')">Most popular Pizza</button>
+        <button class="tab-btn" onclick="showTab('History')">History</button>
+    </div>
+
+    <div id="home" class="tab-content active">
+        <h3 style="text-align: center;">Welcome to my website where you can find out about everything pizza related!</h3>
+
+Pizza is one of the most widely recognized and consumed foods across the globe. Characterized by a baked flatbread base topped with sauce, cheese, and various ingredients, it exists in countless regional variations and culinary traditions. This site serves as a resource for exploring its origins, popular varieties, and global impact.
+
+While styles vary significantly by region, standard pizza construction relies on a balance of core elements: a fermented flour dough, a tomato-based or white sauce, cheese (most commonly mozzarella), and an assortment of meats, vegetables, or herbs. Variations in crust thickness, baking temperature, and cooking methods (such as wood-fired ovens vs. deck ovens) result in distinct textures and flavor profiles. </p>
+    </div>
+
+    <div id="mpp" class="tab-content">
+        <p><h3>Most Popular Pizzas & Classic Styles</h3>
+            <h4 style="text-align: left;">Margherita</h4>
+            
+            A classic Neapolitan style featuring a simple combination of San Marzano tomato sauce, fresh mozzarella cheese, fresh basil leaves, and extra virgin olive oil.
+            
+            <h4 style="text-align: left;">pepperoni:</h4> A dominant style in North America, consisting of cured pork and beef pepperoni slices layered over mozzarella cheese and a tomato sauce base.
+            
+            
+            
+            Combination / Supreme: Typically includes a mix of savory meats—such as Italian sausage and pepperoni—alongside vegetables like green peppers, onions, and mushrooms.
+            
+            Barbecue Chicken: Features cooked chicken breast, red onions, and mozzarella cheese served over a barbecue sauce base rather than a traditional tomato sauce.
+            
+            Vegetarian & Specialty Options
+            
+            Four Cheese (Quattro Formaggi): Focuses on a rich combination of four distinct cheeses, commonly including mozzarella, gorgonzola, parmesan, and ricotta or fontina.
+            
+            Vegetable / Garden: Features an array of fresh toppings such as sliced mushrooms, bell peppers, black olives, red onions, and fresh spinach.</p>
+    </div>
+
+    <div id="History" class="tab-content">
+        <p>.</p>
+    </div>
+
+    <script>
+        function showTab(id) {
+            document.querySelectorAll('.tab-content').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

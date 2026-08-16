@@ -1,0 +1,69 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: rgb(81, 204, 147);
+  background-image: url("644372.jpg");
+  font-family: verdana;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center; 
+  background-attachment: fixed; 
+  
+  font-family: verdana; 
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+/* buttons */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-buttons button {
+  font-family: verdana;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: 2px solid black;
+  background-color: rgb(199, 136, 19);
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.tab-buttons button:hover {
+  background-color: rgb(119, 5, 5);
+}
+
+.tab-buttons button.active {
+  background-color: rgb(11, 78, 9);
+  font-weight: bold;
+}
+
+/* Tab content boxes */
+.tab-content {
+  display: none;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 6px;
+}
+
+.tab-content.active {
+  display: block;
+}
