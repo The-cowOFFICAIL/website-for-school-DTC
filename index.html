@@ -1,63 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="george.css">
-    <title>George</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="george.css">
+  <title>George's Pizza Guide</title>
 </head>
 <body>
+
+  <header class="site-header">
     <h1>Pizza</h1>
+  </header>
 
-    <div class="tab-buttons">
-        <button class="tab-btn active" onclick="showTab('home')">home</button>
-        <button class="tab-btn" onclick="showTab('mpp')">Most popular Pizza</button>
-        <button class="tab-btn" onclick="showTab('History')">History</button>
-    </div>
+  <nav class="tab-buttons">
+    <button class="tab-btn active" onclick="showTab('home', event)">Home</button>
+    <button class="tab-btn" onclick="showTab('mpp', event)">Most Popular Pizzas</button>
+    <button class="tab-btn" onclick="showTab('history', event)">History</button>
+  </nav>
 
-    <div id="home" class="tab-content active">
-        <h3 style="text-align: center;">Welcome to my website where you can find out about everything pizza related!</h3>
+  <main>
+    <section id="home" class="tab-content active">
+      <h3>Welcome to my website, where you can find out about everything pizza related!</h3>
 
-Pizza is one of the most widely recognized and consumed foods across the globe. Characterized by a baked flatbread base topped with sauce, cheese, and various ingredients, it exists in countless regional variations and culinary traditions. This site serves as a resource for exploring its origins, popular varieties, and global impact.
+      <p>Pizza is one of the most widely recognized and consumed foods across the globe. Characterized by a baked flatbread base topped with sauce, cheese, and various ingredients, it exists in countless regional variations and culinary traditions. This site serves as a resource for exploring its origins, popular varieties, and global impact.</p>
 
-While styles vary significantly by region, standard pizza construction relies on a balance of core elements: a fermented flour dough, a tomato-based or white sauce, cheese (most commonly mozzarella), and an assortment of meats, vegetables, or herbs. Variations in crust thickness, baking temperature, and cooking methods (such as wood-fired ovens vs. deck ovens) result in distinct textures and flavor profiles. </p>
-    </div>
+      <p>While styles vary significantly by region, standard pizza construction relies on a balance of core elements: a fermented flour dough, a tomato-based or white sauce, cheese (most commonly mozzarella), and an assortment of meats, vegetables, or herbs. Variations in crust thickness, baking temperature, and cooking methods &mdash; such as wood-fired ovens versus deck ovens &mdash; result in distinct textures and flavor profiles.</p>
 
-    <div id="mpp" class="tab-content">
-        <p><h3>Most Popular Pizzas & Classic Styles</h3>
-            <h4 style="text-align: left;">Margherita</h4>
-            
-            A classic Neapolitan style featuring a simple combination of San Marzano tomato sauce, fresh mozzarella cheese, fresh basil leaves, and extra virgin olive oil.
-            
-            <h4 style="text-align: left;">pepperoni:</h4> A dominant style in North America, consisting of cured pork and beef pepperoni slices layered over mozzarella cheese and a tomato sauce base.
-            
-            
-            
-            Combination / Supreme: Typically includes a mix of savory meats—such as Italian sausage and pepperoni—alongside vegetables like green peppers, onions, and mushrooms.
-            
-            Barbecue Chicken: Features cooked chicken breast, red onions, and mozzarella cheese served over a barbecue sauce base rather than a traditional tomato sauce.
-            
-            Vegetarian & Specialty Options
-            
-            Four Cheese (Quattro Formaggi): Focuses on a rich combination of four distinct cheeses, commonly including mozzarella, gorgonzola, parmesan, and ricotta or fontina.
-            
-            Vegetable / Garden: Features an array of fresh toppings such as sliced mushrooms, bell peppers, black olives, red onions, and fresh spinach.</p>
-    </div>
+      <hr class="divider">
 
-    <div id="History" class="tab-content">
-        <p>.</p>
-    </div>
+      <p>Use the tabs above to explore the most popular pizza styles served today, or dig into the history of how pizza travelled from Naples to the rest of the world.</p>
+    </section>
 
-    <script>
-        function showTab(id) {
-            document.querySelectorAll('.tab-content').forEach(function(el) {
-                el.classList.remove('active');
-            });
-            document.querySelectorAll('.tab-btn').forEach(function(el) {
-                el.classList.remove('active');
-            });
-            document.getElementById(id).classList.add('active');
-            event.target.classList.add('active');
-        }
-    </script>
+    <section id="mpp" class="tab-content">
+      <h3>Most Popular Pizzas &amp; Classic Styles</h3>
+
+      <div class="pizza-entry">
+        <h4>Margherita</h4>
+        <p>A classic Neapolitan style featuring a simple combination of San Marzano tomato sauce, fresh mozzarella cheese, fresh basil leaves, and extra virgin olive oil.</p>
+      </div>
+
+      <div class="pizza-entry">
+        <h4>Pepperoni</h4>
+        <p>A dominant style in North America, consisting of cured pork and beef pepperoni slices layered over mozzarella cheese and a tomato sauce base.</p>
+      </div>
+
+      <div class="pizza-entry">
+        <h4>Combination / Supreme</h4>
+        <p>Typically includes a mix of savory meats &mdash; such as Italian sausage and pepperoni &mdash; alongside vegetables like green peppers, onions, and mushrooms.</p>
+      </div>
+
+      <div class="pizza-entry">
+        <h4>Barbecue Chicken</h4>
+        <p>Features cooked chicken breast, red onions, and mozzarella cheese served over a barbecue sauce base rather than a traditional tomato sauce.</p>
+      </div>
+
+      <hr class="divider">
+
+      <h3>Vegetarian &amp; Specialty Options</h3>
+
+      <div class="pizza-entry">
+        <h4>Four Cheese (Quattro Formaggi)</h4>
+        <p>Focuses on a rich combination of four distinct cheeses, commonly including mozzarella, gorgonzola, parmesan, and ricotta or fontina.</p>
+      </div>
+
+      <div class="pizza-entry">
+        <h4>Vegetable / Garden</h4>
+        <p>Features an array of fresh toppings such as sliced mushrooms, bell peppers, black olives, red onions, and fresh spinach.</p>
+      </div>
+    </section>
+
+    <section id="history" class="tab-content">
+      <h3>A Brief History of Pizza</h3>
+
+      <ul class="timeline">
+        <li>
+          <strong>Ancient roots</strong>
+          Flatbreads topped with oils, herbs, and other ingredients date back thousands of years across the Mediterranean, from Greek plakous to Roman flatbreads &mdash; early ancestors of what would become pizza.
+        </li>
+        <li>
+          <strong>18th century &mdash; Naples, Italy</strong>
+          Pizza as it's recognized today took shape among the working class of Naples. Flatbreads topped with tomato (a New World import that took time to catch on) were sold cheaply by street vendors, feeding a poor but growing port city.
+        </li>
+        <li>
+          <strong>1889 &mdash; The Margherita legend</strong>
+          As the story goes, Neapolitan pizzaiolo Raffaele Esposito created a pizza topped with tomato, mozzarella, and basil &mdash; red, white, and green &mdash; in honor of Queen Margherita of Savoy during a royal visit. The pizza Margherita takes her name.
+        </li>
+        <li>
+          <strong>Late 1800s &ndash; early 1900s &mdash; Crossing the Atlantic</strong>
+          Italian immigrants, many from Naples, brought pizza-making with them to the United States. Lombardi's, widely credited as America's first pizzeria, opened in New York City in 1905.
+        </li>
+        <li>
+          <strong>Post-WWII boom</strong>
+          American soldiers stationed in Italy during the Second World War developed a taste for pizza and helped popularize it back home. Demand grew rapidly through the 1940s and 50s.
+        </li>
+        <li>
+          <strong>1950s &ndash; 1960s &mdash; The rise of the chains</strong>
+          Chains such as Pizza Hut (1958) and Domino's (1960) turned pizza into a fast, standardized, and widely available product across the U.S., later expanding internationally.
+        </li>
+        <li>
+          <strong>Today</strong>
+          Pizza is one of the most popular foods in the world, spanning everything from strict Neapolitan tradition (protected by Italy's AVPN standards) to deep-dish, New York-style, Detroit-style, and countless other regional and personal interpretations.
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made for pizza lovers, by a pizza lover.</p>
+  </footer>
+
+  <script>
+    function showTab(id, evt) {
+      document.querySelectorAll('.tab-content').forEach(function (el) {
+        el.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-btn').forEach(function (el) {
+        el.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+  </script>
 </body>
 </html>
